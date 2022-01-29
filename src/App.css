@@ -1,0 +1,230 @@
+/*
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+*/
+
+body,
+#root {
+  /* background-color: #34495e;
+  */
+  background-color: #2980b9;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 20px 0 0;
+}
+
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  margin: auto;
+  height: 350px; /*350*/
+  width: 550px; /*450*/
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  height: 240px;
+  width: 170px;
+}
+
+.figure-part {
+  display: none;
+}
+
+.wrong-letters-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.wrong-letters-container p {
+  margin: 0 0 5px;
+}
+
+.wrong-letters-container span {
+  font-size: 24px;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.letter {
+  /* border-bottom: 3px solid #2980b9;
+ */
+  border-bottom: 3px solid #34495e;
+  display: inline-flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  /*position: fixed;
+  */
+  position: absolute; /*za mobitele*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  /*background: #2980b9;
+*/
+  background: #34495e;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2980b9;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.popup button:active {
+  transform: scale(0.98);
+}
+
+.popup button:focus {
+  outline: 0;
+}
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: -50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.notification-container p {
+  margin: 0;
+}
+
+.notification-container.show {
+  transform: translateY(-50px);
+}
+
+/* za mobitele */
+@media only screen and (max-width: 700px) {
+  .game-container {
+    padding: 0px 0px;
+    position: none; /*relative*/
+    margin: auto;
+    height: 350px;
+    width: 100%;
+  }
+
+  .wrong-letters-container {
+    position: none; /*absolute*/
+    top: 10px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .figure-container {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    height: 250px;
+    width: 170px;
+    border-radius: 10px;
+    margin-left: -25px;
+  }
+
+  .wrong-letters-container p {
+    margin: 0 0 3px;
+  }
+
+  .wrong-letters-container span {
+    font-size: 18px;
+  }
+
+  .word {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .letter {
+    /* border-bottom: 3px solid #2980b9;
+   */
+    border-bottom: 3px solid #34495e;
+    display: inline-flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 15px;
+  }
+}
+
+/* Za ipad i ipad pro*/
+@media only screen and (min-height: 1024px) {
+}
+
+/* 
+
+.notification-container {
+background-color: rgba(0, 0, 0, 0.3);
+border-radius: 10px 10px 0 0;
+padding: 15px 20px;
+position: absolute;
+bottom: -50px;
+transition: transform 0.3s ease-in-out;
+}
+
+*/
